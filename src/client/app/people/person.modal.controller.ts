@@ -20,10 +20,6 @@ namespace app.people {
       this.person = data;
     }
 
-    cancel() {
-      this.$uibModalInstance.dismiss();
-    }
-
     save() {
       this.$uibModalInstance.close(this.person);
     }

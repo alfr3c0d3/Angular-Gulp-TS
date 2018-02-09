@@ -42,16 +42,18 @@ namespace app.people {
         templateUrl: "app/people/person-modal.html",
         controller: "PersonModalController",
         controllerAs: "vm",
-        size: 'sm',
+        size: 'md',
         resolve: {
-          data: originalPerson
+          data: () => this.dataservice.getPerson(id).then((data) => data)
         }
       });
       
-      modalInstance.result.then((response: any) => {
-        if(originalPerson !== response)  
-          this.logger.warning(`Eddited ${response.firstName} ${response.lastName}`);
-      });
+      modalInstance.result
+        .then((response: any) => {
+          if(originalPerson !== response)  
+            this.logger.warning(`Eddited ${response.firstName} ${response.lastName}`);
+        })
+        .catch(() => modalInstance.close());
 
     }
 

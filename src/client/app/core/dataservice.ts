@@ -23,7 +23,7 @@ namespace app.core {
         .catch(this.fail);
 
     getPerson: (id: number) => ng.IPromise<any> = (id) =>
-      this.$http.get(`/api/person/?id=${id}`)
+      this.$http.get(`/api/person/${id}`)
         .then(this.success)
         .catch(this.fail);
         
