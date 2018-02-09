@@ -1,0 +1,23 @@
+﻿<div ng-controller="SidebarController as vm">
+  <ht-sidebar when-done-animating="vm.sidebarReady()">
+    <div class="sidebar-filler"></div>
+    <div class="sidebar-dropdown"><a href="#">Menu</a></div>
+    <div class="sidebar-inner">
+      <div class="sidebar-widget"></div>
+      <ul class="navi" ng-class="{'bg-color': vm.layout === 'layout2'}">
+        <li class="nlightblue fade-selection-animation" ng-class="vm.isCurrent(r)" ng-repeat="r in vm.navRoutes" ng-if="vm.layout !== 'layout2'">
+          <a ui-sref="{{r.name}}" ng-bind-html="r.settings.content"></a>
+        </li>
+        <li class="nlightblue fade-selection-animation">
+          <a ng-click="vm.changeLayout()">Change Layout</a>
+        </li>
+      </ul>
+    </div>
+  </ht-sidebar>
+</div>
+
+<style>
+    .navi.bg-color > li > a{
+      background: green !important;
+    }
+ </style>

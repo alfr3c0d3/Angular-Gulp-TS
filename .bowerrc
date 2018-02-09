@@ -1,0 +1,11 @@
+{
+  "directory": "bower_components",
+	"registry": "http://bower.herokuapp.com",
+  "proxy":"http://127.0.0.1:8888",
+	"https-proxy":"http://127.0.0.1:8888",
+	"timeout": 30000,
+	"strict-ssl": false,
+	"scripts": {
+		"postinstall": "gulp wiredep"
+	}
+}
