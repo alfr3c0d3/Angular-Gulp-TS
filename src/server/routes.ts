@@ -2,15 +2,14 @@
 
 'use strict';
 
+let dataPath = '/../data/';
+let _ = require('lodash');
+
+import { send404, notFoundMiddleware } from './utils/notfound';  // use latest TS 1.5, inspired from ES6
+import jsonfileservice = require('./utils/jsonfileservice');  
 import express = require('express');
 
-var router = express.Router();
-import { send404, notFoundMiddleware } from './utils/notfound';  // use latest TS 1.5, inspired from ES6
-import data = require('./data');
-
-import jsonfileservice = require('./utils/jsonfileservice');  
-let dataPath = '/../data/';
-
+let router = express.Router();
 router.get('/people', getPeople);
 router.get('/person/:id', getPerson);
 router.get('/*', notFoundMiddleware);
@@ -23,6 +22,7 @@ module.exports = router;
 function getPeople(req: express.Request, res: express.Response, next: any) {
     try {
         var json = jsonfileservice.getJsonFromFile(`${dataPath}people.json`);
+        
         if(json){
             res.status(200).send(json);
         }
@@ -36,14 +36,21 @@ function getPeople(req: express.Request, res: express.Response, next: any) {
 }
 
 function getPerson(req: express.Request, res: express.Response, next: any) {
-    var id = +req.params.id;
-    var person = data.getPeople().filter(function(p) {
-        return p.id === id;
-    })[0];
 
-    if (person) {
-        res.status(200).send(person);
-    } else {
-        send404(req, res, 'person ' + id + ' not found');
+    try {
+        var id = +req.params.id;
+
+        var person = _.find(jsonfileservice.getJsonFromFile(`${dataPath}people.json`),  (item: any) => {
+            return item.id == id;
+        });
+        
+        if (person) {
+            res.status(200).send(person);
+        } else {
+            send404(req, res, `Person  with id ${id} not found`);
+        }
+        
+    } catch (error) {
+        send404(req, res, error.message);
     }
 }
