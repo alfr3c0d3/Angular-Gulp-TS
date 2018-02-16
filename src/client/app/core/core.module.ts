@@ -4,7 +4,7 @@ namespace app.core {
   angular
     .module('app.core', [
       'ui.bootstrap',
-      'ngAnimate', 'ngSanitize',
+      'ngAnimate', 'ngSanitize', 'ngMaterial', 'ngMessages',
       'blocks.exception', 'blocks.logger', 'blocks.router',
       'ui.router', 'ngplus'
     ]);

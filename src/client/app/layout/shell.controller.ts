@@ -37,7 +37,7 @@ namespace app.layout {
 
     activate() {
       
-      var statePromise = (this.layout === 'layout1') ?  this.$state.go('dashboard') : this.$state.go('people', { isFromState: true } );
+      var statePromise = (this.layout === 'layout1') ?  this.$state.go('dashboard') : this.$state.go('people', { isFromState: true }, {reload: true} );
 
       statePromise.then(_ => {
           this.navline = {

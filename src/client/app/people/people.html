@@ -1,32 +1,81 @@
-<section ng-class="{ 'mainbar': vm.isFromState === true }">
+<!-- <section ng-class="{ 'mainbar': vm.isFromState === true }">
   <section ng-class="{ 'matter': vm.isFromState === true }">
-    <div class="container">
-      <div class="widget" ng-class="vm.changeColor()">
-        <div ht-widget-header title="People" allow-collapse="true"></div>
-        <div class="widget-content text-center text-info">
-          <table class="table table-condensed table-striped">
-            <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Age</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr ng-repeat="p in vm.people">
-                <td><a ng-click="vm.edit(p.id)">{{p.firstName}}</p></td>
-                <td>{{p.lastName}}</td>
-                <td>{{p.age}}</td>
-                <td>{{ p.city + ' ' + p.state}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="widget-foot">
-          <div class="clearfix"></div>
-        </div>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <span>People</span>
+      </div>
+    </md-toolbar>
+    <div layout="row">
+      <div flex-gt-sm="50" flex="">
+        <md-list role="list">
+          <md-list-item class="md-2-line" layout="row" role="listitem">
+            <div class="md-list-item-text" layout="column" layout-align="center start">
+              <h6>Full Name</h6>
+            </div>
+          </md-list-item>
+          <md-list-item class="md-2-line _md-button-wrap" style="padding: 0;" ng-repeat="p in vm.people" layout="row" role="listitem">
+            <div class="md-no-style md-button md-ink-ripple" layout="column" layout-align="center start" ng-click="vm.edit(p.id)">
+              <div class="md-list-item-inner">
+                <img ng-src="/src/client/images/photos/{{p.thumbnail}}" class="md-avatar" alt="{{p.firstName + ' ' + p.lastName}}">
+                <div class="md-list-item-text">
+                  <h3>{{p.firstName}}</h3>
+                  <h5>{{p.lastName}}</h5>
+                </div>
+              </div>
+            </div>
+          </md-list-item>
+        </md-list>
+      </div>
+      <div flex-gt-sm="50" flex="">
+        <md-list role="list">
+          <md-list-item class="md-2-line" layout="row" role="listitem">
+            <div class="md-list-item-text" layout="column" layout-align="center start">
+              <h6>Age</h6>
+            </div>
+          </md-list-item>
+          <md-list-item class="md-2-line" style="padding: 0;" ng-repeat="p in vm.people" layout="row" role="listitem">
+            <div class="md-list-item-text" layout="column" layout-align="center start">
+              <h3>{{p.age}}</h3>
+            </div>
+          </md-list-item>
+        </md-list>
+      </div>
+      <div flex-gt-sm="50" flex="">
+        <md-list role="list">
+          <md-list-item class="md-2-line" layout="row" role="listitem">
+            <div class="md-list-item-text" layout="column" layout-align="center start">
+              <h6>Location</h6>
+            </div>
+          </md-list-item>
+          <md-list-item class="md-2-line" style="padding: 0;" ng-repeat="p in vm.people" layout="row" role="listitem">
+            <div class="md-list-item-text" layout="column" layout-align="center start">
+              <h3>{{p.city + ' ' + p.state}}</h3>
+            </div>
+          </md-list-item>
+        </md-list>
       </div>
     </div>
   </section>
 </section>
+ -->
+
+<md-grid-list md-cols="3" md-row-height="fit">
+  <md-grid-tile>
+    <md-grid-tile-header>
+      <h3>Full Name</h3>
+    </md-grid-tile-header>
+  </md-grid-tile>
+  <md-grid-tile>
+    <md-grid-tile-header>
+      <h3>Age</h3>
+    </md-grid-tile-header>
+  </md-grid-tile>
+  <md-grid-tile>
+    <md-grid-tile-header>
+      <h3>Location</h3>
+    </md-grid-tile-header>
+  </md-grid-tile>
+  <md-grid-tile md-rowspan="0"> AAAA </md-grid-tile>
+  <md-grid-tile> BB </md-grid-tile>
+  <md-grid-tile> CC </md-grid-tile>
+</md-grid-list>

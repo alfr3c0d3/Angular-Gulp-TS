@@ -2,22 +2,30 @@
   <h3>{{vm.title}}</h3>
 </div>
 <div class="modal-body">
-  <div class="form-group">
-    <label class="control-label">First Name</label>
-    <input type="text" class="form-control" ng-model="vm.person.firstName" />
-  </div>
-  <div class="form-group">
-    <label class="control-label">Last Name</label>
-    <input type="text" class="form-control" ng-model="vm.person.lastName" />
-  </div>
-  <div class="form-group">
-    <label class="control-label">Age</label>
-    <input type="text" class="form-control" ng-model="vm.person.age" />
-  </div>
-  <div class="form-group">
-    <label class="control-label">Location</label>
-    <input type="text" class="form-control" ng-model="vm.person.location" />
-  </div>
+  <md-input-container class="md-block flex-gt-md">
+    <label class="md-body-1">Age</label>
+    <input ng-model="vm.person.age" class="md-input">
+  </md-input-container>
+  <md-input-container class="md-block flex-gt-md">
+    <label class="md-body-1">First Name</label>
+    <input ng-model="vm.person.firstName" class="md-input">
+  </md-input-container>
+  <md-input-container class="md-block flex-gt-md">
+    <label class="md-body-1">Last Name</label>
+    <input ng-model="vm.person.lastName" class="md-input">
+  </md-input-container>
+  <md-input-container class="md-block flex-gt-md">
+    <label class="md-body-1">City</label>
+    <input ng-model="vm.person.city" class="md-input">
+  </md-input-container>
+  <md-input-container class="md-block flex-gt-md">
+    <label class="md-body-1">State</label>
+    <input ng-model="vm.person.state" class="md-input">
+  </md-input-container>
+  <md-input-container class="md-block flex-gt-md">
+    <label class="md-body-1">Zip Code</label>
+    <input ng-model="vm.person.zip" class="md-input">
+  </md-input-container>
 </div>
 <div class="modal-footer">
   <button class="btn btn-primary" ng-click="vm.save()">Save</button>
