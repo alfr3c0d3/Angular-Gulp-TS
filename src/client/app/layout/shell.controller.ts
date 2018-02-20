@@ -6,6 +6,7 @@ namespace app.layout {
 
     private layout: string;
     private navline: {};
+    private nav: string; 
 
 
     constructor(private $rootScope: any,
@@ -25,6 +26,14 @@ namespace app.layout {
         this.applyChanges();
       });
 
+      this.$scope.$on('signedIn', (event, data) => {
+        this.$timeout(() => {
+          this.nav = data;
+          this.$state.go('home2')
+          // $scope.$broadcast("refreshDirective");
+         })  
+      });
+
       this.activate();
     }
 
@@ -37,20 +46,23 @@ namespace app.layout {
 
     activate() {
       
-      var statePromise = (this.layout === 'layout1') ?  this.$state.go('dashboard') : this.$state.go('people', { isFromState: true } );
+      // var statePromise = (this.layout === 'layout1') ?  this.$state.go('dashboard') : this.$state.go('people', { isFromState: true } );
 
-      statePromise.then(_ => {
-          this.navline = {
-            title: this.layout === "layout1" ? this.config.appTitle : "People",
-            text: this.layout === "layout1" ? 'Created by John Papa' : 'Created by Alfredo Morales',
-            link: this.layout === "layout1" ? 'http://twitter.com/john_papa' : 'https://maps.google.com/'
-          };
-        });
+      // statePromise.then(_ => {
+      //     this.navline = {
+      //       title: this.layout === "layout1" ? this.config.appTitle : "People",
+      //       text: this.layout === "layout1" ? 'Created by John Papa' : 'Created by Alfredo Morales',
+      //       link: this.layout === "layout1" ? 'http://twitter.com/john_papa' : 'https://maps.google.com/'
+      //     };
+      //   });
     }
 
     busyMessage = 'Please wait ...';
     isBusy = true;
 
+    signIn() {
+      this.$state.go("signIn");
+    }
 
     hideSplash() {
       //Force a 1 second delay so we can see the splash.

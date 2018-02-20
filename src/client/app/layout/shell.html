@@ -1,17 +1,134 @@
 <div ng-controller="ShellController as vm">
-  <header class="clearfix">
-    <ht-top-nav ng-if="vm.layout == 'layout1'" navline="vm.navline"></ht-top-nav>
-    <ht-top-nav-2 ng-if="vm.layout == 'layout2'" navline="vm.navline"></ht-top-nav-2>
+  <!--========================================================
+  HEADER
+  =========================================================-->
+  <header class="page-head">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+          <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fullwidth" data-md-device-layout="rd-navbar-fullwidth" data-sm-device-layout="rd-navbar-fullwidth" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-sm-stick-up-offset="229px" data-lg-stick-up-offset="155px" class="rd-navbar rd-navbar-default">
+              <!-- RD Navbar top part-->
+              <div class="rd-navbar-top-part bg-primary">
+                  <div class="shell">
+                      <div class="reveal-sm-flex range-sm-justify">
+                          <div>
+                              <ul class="list-inline list-inline-md">
+                                  <li><a href="#" class="icon fa-facebook icon-default"></a></li>
+                                  <li><a href="#" class="icon fa-twitter icon-default"></a></li>
+                                  <li><a href="#" class="icon fa-google-plus icon-default"></a></li>
+                                  <li><a href="#" class="icon fa-youtube icon-default"></a></li>
+                                  <li><a href="#" class="icon fa-rss icon-default"></a></li>
+                              </ul>
+                          </div>
+                          <div class="offset-top-5 offset-md-top-0">
+                              <ul class="list-inline list-inline-sm reveal-inline reval-md-block">
+                                  <li class="text-white text-italic">Place an Order Now!</li>
+                                  <li><a href="#" class="text-white text-extra-bold link-underline" ng-click="vm.signIn()" ui-sref-opts="{reload: true}">Sign In</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <ht-top-nav ng-show="!vm.nav" title=""></ht-top-nav>
+              <ht-top-nav ng-show="vm.nav" user="admin" title=""></ht-top-nav>
+              <!-- <ht-top-nav ng-if="vm.user === 'admin'" title="" user="admin"></ht-top-nav>
+              <ht-top-nav ng-if="vm.user === 'buyer'" title="" user="buyer"></ht-top-nav>
+              <ht-top-nav ng-if="vm.user === 'supplier'" title="" user="supplier"></ht-top-nav> -->
+          </nav>
+      </div>
   </header>
-  <section id="content" class="content">
-    <div ng-include="'app/layout/sidebar.html'"></div>
 
-    <div ui-view class="shuffle-animation"></div>
+  <!--========================================================
+  BODY
+  =========================================================-->
 
-    <div ngplus-overlay ngplus-overlay-delay-in="50" ngplus-overlay-delay-out="700" ngplus-overlay-animation="dissolve-animation">
-      <img src="images/busy.gif" />
+  <main class="page-content">
+      <div ui-view class="shuffle-animation"></div>
+  </main>
 
-      <div class="page-spinner-message overlay-message">{{vm.busyMessage}}</div>
-    </div>
-  </section>
+  <!--========================================================
+  FOOTER
+  =========================================================-->
+  <div class="footer-offset-none">
+      <!-- Page Footer-->
+      <footer class="page-footer footer-default text-sm-left">
+          <div class="bg-cape-cod section-60 section-md-top-85 section-md-bottom-70">
+              <div class="shell">
+                  <div class="range">
+                      <div class="cell-sm-6 cell-md-5">
+                          <div class="brand"><a href="#" class="brand-name"><span class="text-primary">Plenty</span><span class="text-uppercase text-white">RX</span></a>
+                          </div>
+                          <div class="offset-top-20">
+                              <p>PlentyRX is here to helps U.S. pharmacies save 2% to 5% or more on every purchase using built-in advanced price analytics. Based on the rule set you choose, your order is compared against aggressive market pricing and we give you a true cost comparison!</p>
+                          </div>
+                      </div>
+                      <div class="cell-sm-6 cell-md-4 offset-top-50 offset-md-top-0">
+                          <h6 class="text-white">Opening hours</h6>
+                          <div class="offset-top-45">
+                              <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal">
+                                  <div class="unit-left">
+                                      <div class="icon fa-clock-o icon-circle text-middle text-primary"></div>
+                                  </div>
+                                  <div class="unit-body">
+                                      <div class="text-italic">Monday-Friday: 9am-6pm<br>Saturday: 10am-4pm
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="offset-top-35 offset-sm-top-10 unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-xs-vertical">
+                              <div class="unit-left">
+                                  <div class="icon fa-envelope icon-circle text-middle text-primary"></div>
+                              </div>
+                              <div class="unit-body">
+                                  <div class="text-italic"><a href="mailto:#">customer-service@plentyrx.com</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="cell-sm-6 cell-md-3 offset-top-50 offset-md-top-0">
+                          <h6 class="text-white">Contact info</h6>
+                          <div class="offset-sm-top-45"></div>
+                          <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-xs-vertical">
+                              <div class="unit-left">
+                                  <div class="icon fa-phone icon-circle text-middle text-primary"></div>
+                              </div>
+                              <div class="unit-body">
+                                  <div class="text-italic"><a href="callto:#">555-123-2323</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="offset-top-35 offset-sm-top-10 unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-xs-vertical">
+                              <div class="unit-left">
+                                  <div class="icon fa-map-marker icon-circle text-middle text-primary"></div>
+                              </div>
+                              <div class="unit-body">
+                                  <div class="text-italic"><a href="#">22 St. Black Road<br/>Tampa, FL 3457</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="shell footer-container footer-copyright">
+              <div class="reveal-sm-flex range-sm-justify range-sm-reverse range-sm-middle">
+                  <div>
+                      <ul class="list-inline list-inline-md">
+                          <li><a href="#" class="icon fa-facebook icon-default"></a></li>
+                          <li><a href="#" class="icon fa-twitter icon-default"></a></li>
+                          <li><a href="#" class="icon fa-google-plus icon-default"></a></li>
+                          <li><a href="#" class="icon fa-youtube icon-default"></a></li>
+                          <li><a href="#" class="icon fa-rss icon-default"></a></li>
+                      </ul>
+                  </div>
+                  <div class="offset-top-15 offset-sm-top-0">
+                      <p>
+                          &#169; <span id="copyright-year"></span> <a href="#"><span class="text-primary">Plenty</span><span class="text-uppercase text-white">RX</span></a>. <a href="#">Privacy Policy</a>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </footer>
+  </div>
+
 </div>

@@ -1,31 +1,124 @@
-<nav class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-header">
-    <a href="/" class="navbar-brand"><span class="brand-title">{{vm.navline.title}}</span></a>
-    <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </a>
+<div class="rd-navbar-inner rd-navbar-inner-1">
+  <!-- RD Navbar Panel-->
+  <div class="rd-navbar-panel">
+      <!-- RD Navbar Toggle-->
+      <button data-rd-navbar-toggle=".rd-navbar-nav-wrap" class="rd-navbar-toggle"><span></span></button>
+      <div class="reveal-sm-flex range-sm-around range-md-justify range-sm-middle">
+          <div>
+              <!-- RD Navbar Brand-->
+              <div class="rd-navbar-brand brand">
+                  <a href="" class="brand-name"><img src="/images/PlentyRx.png" class="logo" ng-click="vm.goHome()"></a>
+              </div>
+          </div>
+          <div class="veil reveal-sm-block">
+              <!--<ul class="list-inline list-inline-from-md text-left">
+                  <li>
+                      <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-middle">
+                          <div class="unit-left">
+                              <div class="icon fa-phone icon-circle text-primary"></div>
+                          </div>
+                          <div class="unit-body">
+                              <div class="text-extra-bold text-gray-light">Call Today:</div>
+                              <div class="text-italic">
+                                  <a href="callto:#" class="text-gray-lighter">555-123-2323</a>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="offset-top-15 offset-md-top-0">
+                      <div class="unit unit-xl-horizontal unit-lg-horizontal unit-md-horizontal unit-sm-horizontal unit-middle">
+                          <div class="unit-left">
+                              <div class="icon fa-clock-o icon-circle text-primary"></div>
+                          </div>
+                          <div class="unit-body">
+                              <div class="text-extra-bold text-gray-light">Opening Hours:</div>
+                              <div class="text-italic text-gray-lighter">Mon-Fri: 9am-7pm; Saturday: 10am-4pm</div>
+                          </div>
+                      </div>
+                  </li>
+              </ul>-->
+          </div>
+      </div>
   </div>
-  <div class="navbar-collapse collapse">
-    <div class="pull-right navbar-logo">
-      <ul class="nav navbar-nav pull-right">
-        <li>
-          <a ng-href="{{vm.navline.link}}" target="_blank">
-                        {{vm.navline.text}}
-                    </a>
-        </li>
-        <li class="dropdown dropdown-big">
-          <a href="http://www.angularjs.org" target="_blank">
-            <img src="images/AngularJS-small.png" />
-          </a>
-        </li>
-        <li>
-          <a href="http://www.gulpjs.com/" target="_blank">
-            <img src="images/gulp-tiny.png" />
-          </a>
-        </li>
-      </ul>
-    </div>
+</div>
+<hr class="divider offset-top-0 offset-bottom-0">
+<div class="rd-navbar-inner rd-navbar-inner-2 offset-top-0">
+  <div class="reveal-sm-flex range-sm-justify range-sm-middle pos-relative">
+      <div class="rd-navbar-nav-wrap text-md-left">
+          <!-- RD Navbar Nav-->
+          <ul class="rd-navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="#">Order</a></li>
+              <li>
+                  <a href="#">Sales</a>
+                  <ul class="rd-navbar-dropdown">
+                      <li><a href="#">Sales Report</a></li>
+                      <li><a href="#">Shipping Report</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">Management</a>
+                  <ul class="rd-navbar-dropdown">
+                      <li><a href="#">Customers</a></li>
+                      <li><a href="#">Suppliers</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#">Administration</a>
+                  <ul class="rd-navbar-dropdown">
+                      <li><a href="#">User List</a></li>
+                      <li><a href="#">Traffic Report</a></li>
+                  </ul>
+              </li>
+              <li></li>
+          </ul>
+      </div>
+      <!--RD Navbar Search-->
+      <div class="rd-navbar-search">
+          <form action="#" data-search-live="rd-search-results-live" method="GET" class="rd-search rd-search-nav pull-left">
+              <div class="form-group">
+                  <input id="rd-navbar-search-form-input" type="text" name="s" placeholder="Enter keyword" autocomplete="off" class="rd-navbar-search-form-input form-control form-control-gray-lightest">
+                  <button type="submit" class="rd-search-form-submit veil reveal-sm-inline-block"></button>
+                  <div id="rd-search-results-live" class="rd-search-results-live veil reveal-sm-block"></div>
+              </div>
+          </form><a data-rd-navbar-toggle=".rd-search-nav" data-custom-toggle-disable-on-blur="true" href="#" class="rd-navbar-search-toggle pull-right"><span></span></a>
+      </div>
   </div>
-</nav>
+</div>
+<div class="veil-sm">
+  <div class="shell">
+      <div class="range range-xs-center text-xs-left section-25">
+          <div class="cell-xs-6">
+              <!--<div class="unit unit-xs-horizontal">
+                  <div class="unit-left">
+                      <div class="icon fa-phone icon-circle text-primary"></div>
+                  </div>
+                  <div class="unit-body">
+                      <div class="text-extra-bold text-gray-light">Call Today:</div>
+                      <div class="text-italic">
+                          <a href="callto:#" class="text-gray-lighter">555-123-2323</a>
+                          <span class="text-gray-lighter">; </span>
+                          <br>
+                          <a href="callto:#" class="text-gray-lighter">555-123-2323</a>
+                      </div>
+                  </div>
+              </div>-->
+          </div>
+          <div class="cell-xs-6 offset-top-20 offset-xs-top-0">
+              <!--<div class="unit unit-xs-horizontal">
+                  <div class="unit-left">
+                      <div class="icon fa-clock-o icon-circle text-primary"></div>
+                  </div>
+                  <div class="unit-body">
+                      <div class="text-extra-bold text-gray-light">Opening Hours:</div>
+                      <div class="text-italic text-gray-lighter">
+                          Mon-Fri: 9am-6pm;<br>Sun: 10am-1pm
+                      </div>
+                  </div>
+              </div>-->
+          </div>
+      </div>
+  </div>
+  <hr class="divider offset-top-0 offset-bottom-0">
+</div>
+<!-- <script src="/src/client/app/widgets/script.js"></script> -->
