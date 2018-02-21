@@ -21,16 +21,18 @@
                           </div>
                           <div class="offset-top-5 offset-md-top-0">
                               <ul class="list-inline list-inline-sm reveal-inline reval-md-block">
-                                  <li class="text-white text-italic">Place an Order Now!</li>
-                                  <li><a href="#" class="text-white text-extra-bold link-underline" ng-click="vm.signIn()" ui-sref-opts="{reload: true}">Sign In</a></li>
+                                  <li class="text-white text-italic">{{ vm.headerTitle }}</li>
+                                  <!-- <li><a href="#" class="text-white text-extra-bold link-underline" ng-bind="!vm.user.role ? " ng-click="vm.signIn()" ui-sref-opts="{reload: true}">Sign In</a></li> -->
+                                  <li><a href="#" ng-show="!vm.user.role" class="text-white text-extra-bold link-underline" ng-click="vm.signIn()" ui-sref-opts="{reload: true}">Sign In</a></li>
+                                  <li><a href="#" ng-show="vm.user.role" class="text-white text-extra-bold link-underline" ng-click="vm.signOut()" ui-sref-opts="{reload: true}">Sign Out</a></li>
                               </ul>
                           </div>
                       </div>
                   </div>
               </div>
 
-              <ht-top-nav ng-show="!vm.nav" title=""></ht-top-nav>
-              <ht-top-nav ng-show="vm.nav" user="admin" title=""></ht-top-nav>
+              <ht-top-nav ng-show="!vm.user.role" title=""></ht-top-nav>
+              <ht-top-nav ng-show="vm.user.role === 'admin'" user="admin" title=""></ht-top-nav>
               <!-- <ht-top-nav ng-if="vm.user === 'admin'" title="" user="admin"></ht-top-nav>
               <ht-top-nav ng-if="vm.user === 'buyer'" title="" user="buyer"></ht-top-nav>
               <ht-top-nav ng-if="vm.user === 'supplier'" title="" user="supplier"></ht-top-nav> -->

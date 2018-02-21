@@ -7,7 +7,10 @@
         "city": "Albany",
         "state": "NY",
         "zip": "12205",
-        "thumbnail": "colleen_papa.jpg"
+        "thumbnail": "colleen_papa.jpg",
+        "userName":"black@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 2,
@@ -17,7 +20,10 @@
         "city": "Loudonville",
         "state": "NY",
         "zip": "12211",
-        "thumbnail": "john_papa.jpg"
+        "thumbnail": "john_papa.jpg",
+        "userName":"tony@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 3,
@@ -27,7 +33,10 @@
         "city": "Bothell",
         "state": "WA",
         "zip": "98012",
-        "thumbnail": "ward_bell.jpg"
+        "thumbnail": "ward_bell.jpg",
+        "userName":"clint@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 4,
@@ -37,7 +46,10 @@
         "city": "Orlando",
         "state": "FL",
         "zip": "33746",
-        "thumbnail": "jesse_liberty.jpg"
+        "thumbnail": "jesse_liberty.jpg",
+        "userName":"steve@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 5,
@@ -47,7 +59,10 @@
         "city": "Raleigh",
         "state": "NC",
         "zip": "27601",
-        "thumbnail": "jason_salmond.jpg"
+        "thumbnail": "jason_salmond.jpg",
+        "userName":"thor@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 6,
@@ -57,7 +72,10 @@
         "city": "Grand Rapids",
         "state": "MI",
         "zip": "49503",
-        "thumbnail": "tim_heuer.jpg"
+        "thumbnail": "tim_heuer.jpg",
+        "userName":"bruce@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 7,
@@ -67,7 +85,10 @@
         "city": "Seattle",
         "state": "WA",
         "zip": "98101",
-        "thumbnail": "elijah_manor.jpg"
+        "thumbnail": "elijah_manor.jpg",
+        "userName":"harry@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 8,
@@ -77,7 +98,10 @@
         "city": "Phoenix",
         "state": "AZ",
         "zip": "85007",
-        "thumbnail": "esteban_garcia.jpg"
+        "thumbnail": "esteban_garcia.jpg",
+        "userName":"bilbo@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 9,
@@ -87,7 +111,10 @@
         "city": "Nome",
         "state": "AK",
         "zip": "99762",
-        "thumbnail": "howard_dierking.jpg"
+        "thumbnail": "howard_dierking.jpg",
+        "userName":"elessar@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 10,
@@ -97,7 +124,10 @@
         "city": "Baltimore",
         "state": "MD",
         "zip": "21117",
-        "thumbnail": "fritz_onion.jpg"
+        "thumbnail": "fritz_onion.jpg",
+        "userName":"percy@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 11,
@@ -107,7 +137,10 @@
         "city": "Dallas",
         "state": "TX",
         "zip": "75212",
-        "thumbnail": "dan_wahlin.jpg"
+        "thumbnail": "dan_wahlin.jpg",
+        "userName":"jerle@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 12,
@@ -117,7 +150,10 @@
         "city": "Highlands",
         "state": "TX",
         "zip": "77562",
-        "thumbnail": "brad_green.jpg"
+        "thumbnail": "brad_green.jpg",
+        "userName":"menion@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 13,
@@ -127,7 +163,10 @@
         "city": "San Francisco",
         "state": "CA",
         "zip": "94111",
-        "thumbnail": "keith_sparkjoy.jpg"
+        "thumbnail": "keith_sparkjoy.jpg",
+        "userName":"severus@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 14,
@@ -137,7 +176,10 @@
         "city": "New York City",
         "state": "NY",
         "zip": "10001",
-        "thumbnail": "john_papa.jpg"
+        "thumbnail": "john_papa.jpg",
+        "userName":"sirius@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 15,
@@ -147,7 +189,10 @@
         "city": "New Haven",
         "state": "CN",
         "zip": "06501",
-        "thumbnail": "rob_eisenberg.jpg"
+        "thumbnail": "rob_eisenberg.jpg",
+        "userName":"gandalf@test.com",
+        "password":"",
+        "role": "admin"
     },
     {
         "id": 16,
@@ -157,6 +202,9 @@
         "city": "Portland",
         "state": "OR",
         "zip": "97211",
-        "thumbnail": "julie_lerman.jpg"
+        "thumbnail": "julie_lerman.jpg",
+        "userName":"arwen@test.com",
+        "password":"",
+        "role": "admin"
     }
 ]

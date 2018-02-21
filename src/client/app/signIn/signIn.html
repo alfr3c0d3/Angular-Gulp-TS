@@ -1,9 +1,16 @@
 <section id="dashboard-view" class="mainbar">
     <section class="matter">
         <div class="container">
-
-            <input type="text" ng-model="vm.userName">
-            <button ng-click="vm.signIn()">Sign In</button>
+            <div class="form-group">
+                <label class="control-label">Username</label>
+                <input class="form-control" type="text" ng-model="vm.userName">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input class="form-control" type="text" ng-model="vm.password">
+            </div>
+            <button class="btn btn-success" ng-click="vm.signIn()">Sign In</button>
         </div>
     </section>
 </section>
+<script src="/src/client/app/widgets/script.js"></script>
