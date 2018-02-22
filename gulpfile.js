@@ -152,7 +152,7 @@ gulp.task('images', ['clean-images'], function() {
 
     return gulp
         .src(config.images)
-        .pipe($.imagemin({optimizationLevel: 4}))
+        // .pipe($.imagemin({optimizationLevel: 4}))
         .pipe(gulp.dest(config.build + 'images'));
 });
 
@@ -369,7 +369,7 @@ gulp.task('clean-code', function(done) {
  *    gulp test --startServers
  * @return {Stream}
  */
-gulp.task('test', ['vet', 'tsc', 'templatecache'], function(done) {
+gulp.task('test', ['tsc', 'templatecache'], function(done) {
     startTests(true /*singleRun*/ , done);
 });
 
@@ -505,7 +505,8 @@ function serve(isDev, specRunner) {
 
    if (isDev) {
 //        runNodeInspector();
-       nodeOptions.nodeArgs = ['--debug=5858'];
+        var debugMode = semver.satisfies(process.versions.node, '>=7.0.0') ? '--inspect' : '--debug';
+        nodeOptions.nodeArgs = [debugMode + '=5858'];
    }
 
     if (args.verbose) {
