@@ -32,18 +32,18 @@ namespace applayout {
       // this.activate();
     }
 
-    // activate() {
-    //   var plugins = {rdNavbar : $(".rd-navbar")}
-    //   if (plugins.rdNavbar.length) {
-    //     plugins.rdNavbar.RDNavbar({
-    //       //autoHeight: false,
-    //       stickUpClone: (plugins.rdNavbar.attr("data-stick-up-clone")) ? plugins.rdNavbar.attr("data-stick-up-clone") === 'true' : false
-    //     });
-    //     if (plugins.rdNavbar.attr("data-body-class")) {
-    //       document.body.className += ' ' + plugins.rdNavbar.attr("data-body-class");
-    //     }
-    //   }
-    // }
+    activate() {
+      // var plugins = {rdNavbar : $(".rd-navbar")};
+      // if (plugins.rdNavbar.length) {
+      //   plugins.rdNavbar.RDNavbar({
+      //     //autoHeight: false,
+      //     stickUpClone: (plugins.rdNavbar.attr("data-stick-up-clone")) ? plugins.rdNavbar.attr("data-stick-up-clone") === 'true' : false
+      //   });
+      //   if (plugins.rdNavbar.attr("data-body-class")) {
+      //     document.body.className += ' ' + plugins.rdNavbar.attr("data-body-class");
+      //   }
+      // }
+    }
   }
 
   angular

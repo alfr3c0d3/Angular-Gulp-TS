@@ -59,7 +59,7 @@ namespace app.layout {
 
     activate() {
       this.user = JSON.parse(sessionStorage.getItem("user")) || this.user;
-      this.headerTitle = this.user.role ? `Welcome ${this.user.firstName} ${this.user.lastName} !` : 'Place an Order Now!'
+      this.headerTitle = this.user.role ? `Welcome ${this.user.firstName} ${this.user.lastName}!` : 'Place an Order Now!'
       if(this.user.role) 
         this.$state.go("home2");
 
